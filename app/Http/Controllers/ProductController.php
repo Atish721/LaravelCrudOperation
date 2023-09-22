@@ -113,7 +113,7 @@ class ProductController extends Controller
         $products = Product::where('name', 'like', '%' . $search . '%')->paginate(10);
 
         return view('products.productsListView',compact('products'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+        ->with('i', (request()->input('page', 1) - 1) * 10);
     
     }
     

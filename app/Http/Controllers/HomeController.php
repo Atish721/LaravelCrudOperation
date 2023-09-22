@@ -27,7 +27,7 @@ class HomeController extends Controller
         $products = Product::latest()->paginate(10);
     
         return view('products.productsListView',compact('products'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 10);
         // return view('home');
     }
 
