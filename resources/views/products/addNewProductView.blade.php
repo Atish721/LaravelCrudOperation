@@ -3,10 +3,10 @@
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
-        <div class="pull-left">
+        <div class="float-start">
             <h2>Add New Product</h2>
         </div>
-        <div class="pull-right">
+        <div class="float-end">
             <a class="btn btn-primary" href="{{ route('products') }}"> Back</a>
         </div>
     </div>
@@ -51,7 +51,7 @@
                 <input type="file" name="image" class="form-control" placeholder="image">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-3 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>

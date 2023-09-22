@@ -3,11 +3,11 @@
 @section('content')
 <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
+            <div class="float-start">
                 <h2>Products List</h2>
             </div>
-            <div class="float-right">
-                <a class="btn btn-success" href="{{route('add_product')}}"> Create New Product</a>
+            <div class="float-end mb-3">
+                <a class="btn btn-success" href="{{route('add_product')}}"> Add New Product</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
             <th>Sr.No.</th>
             <th>Image</th>
             <th>Name</th>
-            <th>Details</th>
+            <th>Description</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($products as $product)
