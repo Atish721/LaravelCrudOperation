@@ -105,5 +105,21 @@ class ProductController extends Controller
                         ->with('success','Product deleted successfully');
     }
 
+    public function search(Request $request)
+    {
+
+        $search = $request->input('search');
+
+        $products = Product::where('name', 'like', '%' . $search . '%')->paginate(10);
+
+        return view('products.productsListView',compact('products'))
+        ->with('i', (request()->input('page', 1) - 1) * 5);
+        // return view('products.productsListView', ['products' => $products]);
+
+        // $products = Product::latest()->paginate(10);
+    
+    }
+    
+
     
 }

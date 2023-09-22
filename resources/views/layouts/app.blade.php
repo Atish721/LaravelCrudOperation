@@ -23,6 +23,12 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+
+                <form action="{{ route('products.search') }}" method="GET">
+                    <input type="text" name="search" placeholder="Search by product name">
+                    <button type="submit" class='btn'>Search</button>
+                </form>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

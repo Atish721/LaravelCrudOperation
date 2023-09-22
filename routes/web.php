@@ -23,7 +23,7 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/products', [App\Http\Controllers\HomeController::class, 'index'])->name('products');
 Route::get('/show_product', [App\Http\Controllers\ProductController::class, 'showProduct'])->name('show_product');
-
+Route::get('/products/search', [ProductController::class, 'search'])->name('products.search');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/add_product', [App\Http\Controllers\ProductController::class, 'addProduct'])->name('add_product');
