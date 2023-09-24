@@ -49,6 +49,10 @@
         @endforeach
     </table>
     
-    {!! $products->links() !!}
+    <!-- {!! $products->links() !!} -->
+    
+    <!-- {{ $products->onEachSide(10)->links() }} -->
+
+    {!! $products->onEachSide(10)->links('pagination::bootstrap-5') !!}
         
 @endsection
